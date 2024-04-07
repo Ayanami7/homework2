@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.15)
+
+project(obj CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+# 使用GoogleTest执行测试
+add_subdirectory(ext/GoogleTest)
+
+add_executable(obj 
+    src/sol.h
+    src/main.cpp
+)
+
+# 添加测试用例
+add_executable(sol_test
+    test/sol_test.cpp
+)
+
+target_link_libraries(sol_test GTest::gtest GTest::gtest_main)
+
+# 添加源文件目录包含
+target_include_directories(sol_test PRIVATE ./src)
