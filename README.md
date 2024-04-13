@@ -2,4 +2,4 @@
 
 项目中将GoogleTest作为子模块引入
 
-克隆时需使用`git clone --recursive #project_url`
+克隆时需使用`git clone --recursive https://github.com/Ayanami7/homework2`
